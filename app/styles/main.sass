@@ -1,0 +1,101 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/"
+
+@import 'sass-bootstrap/lib/bootstrap'
+@import "bourbon/bourbon"
+
+body, html
+    height: 100%
+    color: #fff
+
+body
+    background: #1D3571
+
+    .wrapper
+        @include background-image(linear-gradient(top,  rgba(35,31,32,0.6) 0%, rgba(35,31,32,0) 50%, rgba(35,31,32,0.6) 100%))
+        height: 100%
+
+.pattern
+    position: absolute
+    background-image: url(../images/bg-pattern.png)
+
+.pattern.large
+    width: 725px
+    height: 681px
+    top: -340px
+    left: -363px
+    opacity: .05
+
+
+.pattern.small
+    overflow: hidden
+    width: 325px
+    height: 381px
+    right: 0px
+    bottom: 0px
+    opacity: .08
+    background-size: 100%
+    background-repeat: no-repeat
+    background-position: 60px 120px
+
+
+.hightlights
+    padding-top: 150px
+    width: 100%
+
+    img
+        position: relative
+        z-index: 10
+        margin-top: 40px
+
+    p
+        position: relative
+        font-size: 23px
+        margin-bottom: 0
+        z-index: 10
+
+    .company-name
+        margin-top: 8px
+        letter-spacing: 9px
+
+    .left-bar
+        position: absolute
+        height: 280px
+        width: 100%
+        @include background-image(linear-gradient(90deg, rgba(22,33,54,0.8) 0%, rgba(22,33,54,0.24) 35%, rgba(22,33,54,0) 50%))
+    
+        &::after
+            content: ""
+            width: 50%
+            height: 9px
+            display: block
+            z-index: 2
+            position: relative
+            top: 16px 
+            background: rgba(#fff, 0)
+            @include background-image(linear-gradient(90deg, rgba(#b4995b, 0.8) 0, rgba(#b4995b, 0.0) 100%))
+
+
+    .right-bar
+        margin-top: 10px
+        position: absolute
+        height: 280px
+        width: 100%
+        @include background-image(linear-gradient(-90deg, rgba(22,33,54,0.9) 0%, rgba(22,33,54,0.24) 35%, rgba(22,33,54,0) 50%))
+    
+        &::after
+            content: ""
+            left: 50%
+            width: 50%
+            height: 9px
+            display: block
+            z-index: 2
+            position: relative
+            top: 245px 
+            background: rgba(#fff, 0)
+            @include background-image(linear-gradient(-90deg, rgba(#b4995b, 0.9) 0, rgba(#b4995b, 0.0) 100%))
+
+
+.msg
+    margin-top: 70px
+    font-size: 48px
+    color: #6C99B9
