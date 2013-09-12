@@ -1,5 +1,5 @@
 jQuery(document).ready ($) ->
-	$('#header').load 'tpl/header.html', ()->
+	$('#header').load 'header.html', ()->
 
 		console.log 'load tpl'
 

@@ -291,7 +291,9 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
+                        'styles/font/{,*/}*.*',
+                        'bower_components/sass-bootstrap/fonts/*.*',
+                        'videos/*.*'
                     ]
                 }]
             },
