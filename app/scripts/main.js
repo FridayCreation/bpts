@@ -50,7 +50,7 @@ require.config({
     }
 });
 
-require(['app', 'jquery'], function (app, $) {
+require(['jquery','app','bootstrapTab'], function ($, app) {
     'use strict';
     // use app here
     console.log(app);
