@@ -10,7 +10,8 @@ body, html
 body
     background: #1D3571
     @include background-image(linear-gradient(top,  rgba(35,31,32,0.6) 0%, rgba(35,31,32,0) 50%, rgba(35,31,32,0.6) 100%))
-
+    zoom: 90%
+    -o-transform: scale(0.9) // firefox zoom
     .wrapper
         height: 100%
 
@@ -228,12 +229,23 @@ div#instructor-list
                 padding-top: 10px 
                 font-size: 1.2em
 
+div#content-frame
+    width: 1140px
+
 div#article
-    div#video-wrap
+    div.video-wrap
         float: right
         padding: 10px
         padding-left: 20px
         margin-right: 45px
+    div.map-wrap
+        float: right
+        padding-right: 10px
+        padding-left: 20px
+        margin-right: 45px
+    h3.half
+        &::after
+            width: 50%
     h3
         padding-left: 40px
         margin-bottom: 20px
@@ -254,12 +266,25 @@ div#article
     p
         font-size: 1.2em
         padding-left: 40px
+        padding-right: 60px
         line-height: 2em
+
+    a.email
+        background-color: white
+        @include border-top-radius(5px)
+        @include border-bottom-radius(5px)
+        @include border-left-radius(5px)
+        @include border-right-radius(5px)
+        @include box-shadow(5px 5px 5px 3px hsla(0, 0%, 0%, 0.65))
+        text-decoration: none
+        padding: 5px 10px
+
 
     background-image: url(../images/mid.png)
     background-repeat: repeat-y
     padding-bottom: 40px
     margin-top: 12px
+    width: 100%
 
 
 
