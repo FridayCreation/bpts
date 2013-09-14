@@ -13,7 +13,6 @@ require.config({
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
         async: '../bower_components/requirejs-plugins/src/async'
-
     },
     shim: {
         bootstrapAffix: {
@@ -50,7 +49,8 @@ require.config({
             deps: ['jquery']
         },
         tinymap: {
-            deps: ['async!http://maps.google.com/maps/api/js?sensor=false']
+            deps: ['jquery']
+            // deps: ['jquery', ','async!http://maps.google.com/maps/api/js?sensor=false']
         }
     }
 });
@@ -60,7 +60,6 @@ require([
     'app',
     'bootstrapTab', 
     'video',
-    'async!http://maps.google.com/maps/api/js?sensor=false',
     'tinymap'
     ], function ($, app) {
     'use strict';
