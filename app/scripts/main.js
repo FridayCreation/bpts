@@ -11,7 +11,9 @@ require.config({
         bootstrapScrollspy: '../bower_components/sass-bootstrap/js/scrollspy',
         bootstrapTab: '../bower_components/sass-bootstrap/js/tab',
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
-        bootstrapTransition: '../bower_components/sass-bootstrap/js/transition'
+        bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
+        async: '../bower_components/requirejs-plugins/src/async'
+
     },
     shim: {
         bootstrapAffix: {
@@ -46,12 +48,34 @@ require.config({
         },
         bootstrapTransition: {
             deps: ['jquery']
+        },
+        tinymap: {
+            deps: ['async!http://maps.google.com/maps/api/js?sensor=false']
         }
     }
 });
 
-require(['jquery','app','bootstrapTab', 'video'], function ($, app) {
+require([
+    'jquery',
+    'app',
+    'bootstrapTab', 
+    'video',
+    'async!http://maps.google.com/maps/api/js?sensor=false',
+    'tinymap'
+    ], function ($, app) {
     'use strict';
+
+    $('#map').tinyMap({
+      center: {x: 22.274719000000001, y: 114.17359 },
+      zoom: 18,
+      mapTypeControl: false,
+      navigationControl: false,
+      // zoomControl: false,
+      marker: [
+        {addr: ['22.274719000000001', '114.17359'], text: '皇后大道東248號'}
+      ]
+    });
+       
     // use app here
     console.log(app);
     console.log('Running jQuery %s', $().jquery);

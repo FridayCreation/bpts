@@ -24,7 +24,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
+    <div class="container-wrapper">
         <div class="container">
         <div class="pattern large"></div>
         <div class="pattern small"></div>
@@ -33,11 +33,11 @@
             <div id="content-frame">
                 <div id="content-frame-top"></div>
                 <div id="article">
-                <div class="map-wrap">
-                    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://ditu.google.cn/maps?f=q&amp;source=embed&amp;hl=zh-TW&amp;geocode=&amp;q=%E9%A6%99%E6%B8%AF%E7%9A%87%E5%90%8E%E5%A4%A7%E9%81%93%E6%9D%B1248%E8%99%9F&amp;aq=0&amp;oq=%E9%A6%99%E6%B8%AF&amp;sll=-34.394558,144.901654&amp;sspn=12.299242,23.269043&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=%E9%A6%99%E6%B8%AF%E7%9A%87%E5%90%8E%E5%A4%A7%E9%81%93%E6%9D%B1248%E8%99%9F&amp;ll=22.274619,114.173419&amp;spn=0.000869,0.00114&amp;z=19&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=zh-TW&amp;geocode=&amp;q=%E9%A6%99%E6%B8%AF%E7%9A%87%E5%90%8E%E5%A4%A7%E9%81%93%E6%9D%B1248%E8%99%9F&amp;aq=0&amp;oq=%E9%A6%99%E6%B8%AF&amp;sll=-34.394558,144.901654&amp;sspn=12.299242,23.269043&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=%E9%A6%99%E6%B8%AF%E7%9A%87%E5%90%8E%E5%A4%A7%E9%81%93%E6%9D%B1248%E8%99%9F&amp;ll=22.274619,114.173419&amp;spn=0.000869,0.00114&amp;z=19&amp;iwloc=A" style="color:#0000FF;text-align:left">显示详细地图</a></small>
+                <div class="map-wrap" id="map">
+                    
 
                 </div>
-                <h3 class="half">联络我们</h3>
+                <h3 class="half no-margin-top">联络我们</h3>
                 <h4>香港皇后大道东 248 号 31 楼 07 - 08 室</h4>
                 <h4>Flat 07 - 08, 31/F, No 248 Queen's Road East, Hong Kong</h4>
                 <h4>电话: +852 2117 1010 &nbsp;&nbsp;&nbsp;&nbsp; 传真: +852 2117 1010</h4>
@@ -51,6 +51,7 @@
             <div id="footer"></div>
 
         </div>
+    </div>
 
 
         <!-- build:js scripts/vendor.js -->
@@ -61,16 +62,21 @@
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-42439720-1', 'b-pts.com');
+          ga('send', 'pageview');
+
         </script>
 
         <!-- build:js scripts/main.js -->
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <script>
+        
+        </script>
         <!-- endbuild -->
 
         <!-- build:js(.tmp) scripts/coffee.js -->

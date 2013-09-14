@@ -23,7 +23,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
+    <div class="container-wrapper">
         <div class="container">
         <div class="pattern large"></div>
         <div class="pattern small"></div>
@@ -74,7 +74,7 @@
                 <div id="instructor-block" class="tab-content">
                   <div class="tab-pane active" id="elsa-lim">
                     <img src="images/elsa-lim.png" />
-                    <div class="man-story">
+                    <div class="man-story scroll-pane">
                         <h3>林希桦 Elsa Lim</h3>
                         <pre>
 行政总裁
@@ -94,7 +94,7 @@
                   </div>
                   <div class="tab-pane" id="marco-chan">
                     <img src="images/marco-chan.png" />
-                    <div class="man-story">
+                    <div class="man-story scroll-pane">
                         <h3>陈思朗 Marco Chan</h3>
                         <pre>
 1993年毕业于加拿大Ryerson University 化学工程系荣誉学士学位, 亦曾是国际评审员(IRCA) 会员与认可的审核员. 于2009年曾任北京大学公共经济管理研究中心副教授级研究员. 现为5间公司的创办人，是一位全人导师，同时亦是一个7岁女儿的父亲。
@@ -128,7 +128,7 @@ Metek Industrial Co. Ltd
                   </div>
                   <div class="tab-pane" id="jason-chiu">
                     <img src="images/jason-chiu.png" />
-                    <div class="man-story">
+                    <div class="man-story scroll-pane">
                         <h3>Jason Chiu</h3>
                         <pre>
 2006年毕业于澳洲 Monash 大学行销管理学系。是一位专业的个人成长培训导师。从事培训工作已有十年时
@@ -145,7 +145,7 @@ Jason相信人才培育能创造双赢并致力于提供优质的课程给每位
                   </div>
                   <div class="tab-pane" id="cynthia-wu">
                     <img src="images/cynthia-wu.png" />
-                    <div class="man-story">
+                    <div class="man-story scroll-pane">
                         <h3>Cynthia Wu 胡露明</h3>
                         <pre>
 Cynthia的专业经验
@@ -174,7 +174,7 @@ Cynthia的成就榜
                   </div>
                   <div class="tab-pane" id="david">
                     <img src="images/david.png" />
-                    <div class="man-story">
+                    <div class="man-story scroll-pane">
                     
                         <h3>David Gilcrease</h3>
                         <pre>
@@ -203,7 +203,7 @@ Merrill Lynch 美林证券(世界最大的证券零售商和投资银行之一)
                   </div>
                   <div class="tab-pane" id="lance-giroux">
                     <img src="images/lance-giroux.png" />
-                    <div class="man-story">
+                    <div class="man-story scroll-pane">
                     
                         <h3>Lance Giroux CH</h3>
                         <pre>
@@ -231,7 +231,7 @@ AIESEC International 国际经济学商学学生会
                   </div>
                   <div class="tab-pane" id="john-henley">
                     <img src="images/john-henley.png" />
-                    <div class="man-story">
+                    <div class="man-story scroll-pane">
                     
                         <h3>David Gilcrease</h3>
                         <pre>
@@ -259,6 +259,7 @@ Ernst & Young 安永会计师事务所(2011年福布斯排行榜上，安永位�
             <div id="footer"></div>
 
         </div>
+        </div>
 
 
         <!-- build:js scripts/vendor.js -->
@@ -269,12 +270,14 @@ Ernst & Young 安永会计师事务所(2011年福布斯排行榜上，安永位�
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-42439720-1', 'b-pts.com');
+          ga('send', 'pageview');
+
         </script>
 
         <!-- build:js scripts/main.js -->
@@ -284,5 +287,6 @@ Ernst & Young 安永会计师事务所(2011年福布斯排行榜上，安永位�
         <!-- build:js(.tmp) scripts/coffee.js -->
         <script src="scripts/hello.js"></script>
         <!-- endbuild -->
+
 </body>
 </html>

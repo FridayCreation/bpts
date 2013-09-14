@@ -11,15 +11,12 @@ jQuery(document).ready ($) ->
 		$(''+bannerId).removeClass('inactive')
 		# console.log $(bannerId)
 
+
 	$("#myTab a").click (e)->
 		$(this).css('background', 'transparent')
 		# $("div#footer").focus()
 		$('html, body').animate({ scrollTop: $('#footer').offset().top }, 'slow');
 
-# 	$("#myTab a").click (e) ->
-# 	  e.preventDefault()
-# 	  $(this).tab "show"
 
-# 	$('#myTab a:last').tab('show');
-
-# console.log 'hello coffee'
+	# # scroll bar setup
+	# $(".scroll-pane").jScrollPane scrollbarWidth: 18
