@@ -21,10 +21,16 @@ body
     font-family: "Microsoft JhengHei","Microsoft YaHei","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif
     background: #1D71DD
     @include background-image(linear-gradient(top, rgba(6,8,24,0.8) 0%, rgba(46,97,152,0.0) 100%))
-    min-width: 1600px
+    min-width: 1280px
+    margin: 0px
+    position: relative
 
 .container
-    width: 90%
+    min-width: 1170px
+    // width: 100%
+    // margin-left: auto
+    // margin-right: auto
+    // position: relative
     // @include background-image(linear-gradient(top, rgba(6,8,24,1) 0%, rgba(46,97,152,1) 100%))
 
 
@@ -370,5 +376,6 @@ div#content-frame-bottom
     background-image: url(../images/bottom.png)
     background-repeat: no-repeat
 
-
-
+@media screen and (max-width: 1200px)
+    .container-wrapper
+        min-width: 1200px
