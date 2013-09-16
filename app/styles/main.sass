@@ -12,7 +12,7 @@ body
     // @include background-image(linear-gradient(top,  rgba(35,31,32, 1.0) 0%, rgba(35,31,32, 0.0) 100%))
     // @include background-image(linear-gradient(top, rgba(2,23,34,1) 0%, rgba(157,192,222,1) 100%))
     // background-repeat: no-repeat
-    zoom: 90%
+    zoom: 80%
     -o-transform: scale(0.9) // firefox zoom
     .wrapper
         height: 100%
@@ -232,13 +232,8 @@ div#instructor-list
             border: solid 3px
             border-right-style: none
             border-color: rgb(41,92,146)
-            overflow-y: scroll
+            overflow-y: scroll 
 
-            // &::-webkit-scrollbar-thumb
-            //     -webkit-border-radius: 10px
-            //     border-radius: 10px
-            //     background: url('http://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-10/images/header-demos.jpg')
-            //     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5)
             &::-webkit-scrollbar-track
                 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
                 background-color: #F5F5F5
@@ -249,9 +244,6 @@ div#instructor-list
                 width: 18px
                 height: 100%
                 
-            // &::-webkit-scrollbar-thumb
-            //     background-color: #0ae
-            //     background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent))
             &::-webkit-scrollbar-thumb
                 -webkit-border-radius: 10px
                 border-radius: 10px
@@ -278,6 +270,18 @@ div#instructor-list
                     top: 16px 
                     background: rgba(#fff, 0)
                     @include background-image(linear-gradient(90deg, rgba(180, 153, 91, 0.8) 0, rgba(226, 60, 29, 0.8) 100%))
+            p
+                margin-left: 14px
+                // margin-right: 20px
+                padding-right: 25px
+                z-index: 101
+                border: none
+                color: rgba(255, 255, 255, 0.79)
+                background: none
+                padding-top: 10px 
+                font-size: 1.2em
+                line-height: 40px
+
             pre
                 margin-left: 10px
                 margin-right: 20px

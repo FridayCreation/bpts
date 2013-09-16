@@ -1,30 +1,153 @@
 <html>
 <head>
-<!-- Include Google Maps API (Google Maps API v3 已不需使用 API Key) -->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<!-- Require jQuery Library 1.7.0+ or 2.0  -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/tinymap.js"></script>
+<script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="http://jscrollpane.kelvinluck.com/script/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="scripts/jscrollpane.js"></script>
 <style>
-div{
-  height: 480px;
+.scroll {
+    width: 50%;
+    height:800px;
+    overflow-y: scroll;
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+}
+
+.jspContainer
+{
+  overflow: hidden;
+  position: relative;
+}
+
+.jspPane
+{
+  position: absolute;
+}
+
+.jspVerticalBar
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  
+}
+
+.jspHorizontalBar
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: red;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+  margin: 0;
+  padding: 0;
+}
+
+.jspCap
+{
+  display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+  float: left;
+}
+
+.jspTrack
+{
+  background: url(../images/ball-bar.png) top center repeat-y;
+  position: relative;
+}
+
+.jspDrag
+{
+  background: url('images/ball.png') top center no-repeat;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+  float: left;
+  height: 100%;
+}
+
+.jspArrow
+{
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+  cursor: default;
+  background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+  height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+  width: 16px;
+  float: left;
+  height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+  outline: none;
+}
+
+.jspCorner
+{
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+  margin: 0 -3px 0 0;
 }
 </style>
 </head>
 <body>
-<div id="map"></div>
+<title>Index Title</title>
+<body>
+        <div id="pane1" class="scroll">
+        <p>1993年毕业于加拿大Ryerson University 化学工程系荣誉学士学位, 亦曾是国际评审员(IRCA) 会员与认可的审核员.
+
+于2009年曾任北京大学公共经济管理研究中心副教授级研究员. 现为5间公司的创办人，是一位全人导师，同时亦是一个7岁女儿的父亲。
+
+Marco的专业经验毕业后,从事顾问工作，是一位专业的企业管理顾问，曾经在各地为超过80个中小企业担任企业管理顾问，辅导过香港及中国中小企业发挥员工潜力，提高组织绩效，建立企业文化。其中企业包括Handley Walker Ltd. 是Batalas British子公司(Batalas British是在英国的大企业, 已有50年歴史)。他专长于分析并整合整个企业，并使之得以更顺畅地运作，创造更佳之成绩及结果。</p>
+<p>
+曾经合作指导过多间上市公司，当中一些企业客户有: Nissin Foods Co. Ltd 日清食品株式会社 Crystal Properties Development 晶苑地产发展有限公司 Living Property Management Co Supreme Plastic Manafacturing Co. Ltd Access Leather Products Co. Ltd Marshall Karson Construction & Engineering 马素加信建筑工程公司 Macroview Telecom Ltd 高威电信 Ever-Winner Electric Works Ltd Carling Technologies Asia Pacific Ltd 美国嘉灵科技亚太有限公司 Cheung Fung Scientific Co. Ltd Metek Industrial Co. Ltd 他在12年前离开此专业领域，投身于培训行业担任总经理及培训导师，同时热爱创业因为相信梦想都能透过 实践达成。至今已创立了5间不同种类的公司，有个人培训公司、企业培训公司、歴奇公司、电脑公司及日 本餐厅，当中有合作创办亦有全额投资。也因秉持着这份信念，他致力于感染他人实践梦想。 在培训行业逾12年以来，培训过学员人数已超过10000人，当中包括大机构的CEO与管理层。擅长人事管理、 课程设计、发展个人成长，组织团队及训练领袖，致力令身边的人发挥其天份及能力。热爱成就他人梦想，在 与学员互相学习的基础上发挥自身的感染力，引发对方的潜能。并以同理心、中立、友爱的态度，激励及鼓励 学员，另他们在人生里创造不同的成果。</p>
+    </div>
+
+</body>
 <script>
-$(function () {
-    $('#map').tinyMap({
-      center: {x: 22.274719000000001, y: 114.17359 },
-      zoom: 18,
-      mapTypeControl: false,
-      navigationControl: false,
-      zoomControl: false,
-      marker: [
-        {addr: ['22.274719000000001', '114.17359'], text: '皇后大道東248號'}
-      ]
-    });
+$(document).ready(function() {
+    $("#pane1").jScrollPane();
 });
 </script>
 </body>

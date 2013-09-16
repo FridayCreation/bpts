@@ -1,4 +1,7 @@
 jQuery(document).ready ($) ->
+
+	delay = (ms, func) -> setTimeout func, ms
+
 	$('#header').load 'header.html', ()->
 
 		# console.log 'load tpl'
@@ -14,9 +17,23 @@ jQuery(document).ready ($) ->
 
 	$("#myTab a").click (e)->
 		$(this).css('background', 'transparent')
-		# $("div#footer").focus()
 		$('html, body').animate({ scrollTop: $('#footer').offset().top }, 'slow');
+		ping()
 
+	go = ->
+		$('.man-story').jScrollPane(
+			alwaysShowScroll : true
+		)
+
+	ping = ->
+		console.log "Pinged"
+		if $('.man-story').jScrollPane == 'undefined'
+	    	setTimeout ping, 1000
+		else
+	    	go()
+	    	setTimeout go, 500
+	ping()
 
 	# # scroll bar setup
 	# $(".scroll-pane").jScrollPane scrollbarWidth: 18
+

@@ -64,17 +64,19 @@ require([
     ], function ($, app) {
     'use strict';
 
-    $('#map').tinyMap({
-      center: {x: 22.274719000000001, y: 114.17359 },
-      zoom: 18,
-      mapTypeControl: false,
-      navigationControl: false,
-      // zoomControl: false,
-      marker: [
-        {addr: ['22.274719000000001', '114.17359'], text: '皇后大道東248號'}
-      ]
-    });
-       
+    if($('#map').length>0){
+        $('#map').tinyMap({
+          center: {x: 22.274719000000001, y: 114.17359 },
+          zoom: 18,
+          mapTypeControl: false,
+          navigationControl: false,
+          // zoomControl: false,
+          marker: [
+            {addr: ['22.274719000000001', '114.17359'], text: '皇后大道東248號'}
+          ]
+        });
+    }
+    
     // use app here
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
