@@ -59,6 +59,7 @@ require([
     'jquery',
     'app',
     'bootstrapTab', 
+    'bootstrapDropdown',
     'video',
     'tinymap'
     ], function ($, app) {

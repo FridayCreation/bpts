@@ -20,19 +20,19 @@ jQuery(document).ready ($) ->
 		$('html, body').animate({ scrollTop: $('#footer').offset().top }, 'slow');
 		ping()
 
-	go = ->
-		$('.man-story').jScrollPane(
-			alwaysShowScroll : true
-		)
+	# go = ->
+	# 	$('.man-story').jScrollPane(
+	# 		alwaysShowScroll : true
+	# 	)
 
-	ping = ->
-		console.log "Pinged"
-		if $('.man-story').jScrollPane == 'undefined'
-	    	setTimeout ping, 1000
-		else
-	    	go()
-	    	setTimeout go, 500
-	ping()
+	# ping = ->
+	# 	console.log "Pinged"
+	# 	if $('.man-story').jScrollPane == 'undefined'
+	#     	setTimeout ping, 1000
+	# 	else
+	#     	go()
+	#     	setTimeout go, 500
+	# ping()
 
 	# # scroll bar setup
 	# $(".scroll-pane").jScrollPane scrollbarWidth: 18
