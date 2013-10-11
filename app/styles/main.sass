@@ -149,6 +149,7 @@ div#footer
     div#logo
         img
             height: 80px
+
         padding-top: 30px
         margin-left: 50px
 
@@ -186,6 +187,11 @@ div#footer
         margin-left: 20px
         margin-top: 38px
         z-index: 100
+        img
+            @include border-top-radius(20px)
+            @include border-bottom-radius(20px)
+            @include border-left-radius(20px)
+            @include border-right-radius(20px)
 
 div#instructor-list
     width: 1130px

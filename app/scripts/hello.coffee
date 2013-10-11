@@ -2,17 +2,21 @@ jQuery(document).ready ($) ->
 
 	delay = (ms, func) -> setTimeout func, ms
 
-	$('#header').load 'header.html', ()->
+	# 1 <= x <= 18
+	random18 = ->
+		Math.floor(Math.random() * 18) + 1
 
-		# console.log 'load tpl'
+	$('#header').load 'header.html', ()->
 
 
 		urlname = window.location.pathname
 		bannerId = urlname.replace('/','#').replace('.html','-banner')
 		if bannerId is '#' or '' then bannerId = '#index-banner'
-		# console.log bannerId
-		$(''+bannerId).removeClass('inactive')
-		# console.log $(bannerId)
+		
+		if bannerId == '#instructor-banner'
+			$(''+bannerId).fadeIn 1000
+		else
+			$('#b'+random18()).fadeIn 1000
 
 
 	$("#myTab a").click (e)->
@@ -20,20 +24,4 @@ jQuery(document).ready ($) ->
 		$('html, body').animate({ scrollTop: $('#footer').offset().top }, 'slow');
 		ping()
 
-	# go = ->
-	# 	$('.man-story').jScrollPane(
-	# 		alwaysShowScroll : true
-	# 	)
-
-	# ping = ->
-	# 	console.log "Pinged"
-	# 	if $('.man-story').jScrollPane == 'undefined'
-	#     	setTimeout ping, 1000
-	# 	else
-	#     	go()
-	#     	setTimeout go, 500
-	# ping()
-
-	# # scroll bar setup
-	# $(".scroll-pane").jScrollPane scrollbarWidth: 18
-
+	
