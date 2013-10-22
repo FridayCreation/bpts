@@ -4,7 +4,14 @@ jQuery(document).ready ($) ->
 
 	# 1 <= x <= 18
 	random18 = ->
-		Math.floor(Math.random() * 18) + 1
+		Math.floor(Math.random() * 12) + 1
+
+	changeBanner = ->
+		nowBanner = $('#b'+random18())
+		nowBanner.fadeIn 1000
+		# nowBanner.fadeIn 2500, ->
+		# 	nowBanner.delay(5000).fadeOut 500, ->
+		# 		changeBanner()
 
 	$('#header').load 'header.html', ()->
 
@@ -16,7 +23,7 @@ jQuery(document).ready ($) ->
 		if bannerId == '#instructor-banner'
 			$(''+bannerId).fadeIn 1000
 		else
-			$('#b'+random18()).fadeIn 1000
+			changeBanner()
 
 
 	$("#myTab a").click (e)->
